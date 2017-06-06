@@ -30,18 +30,19 @@
 #### 4. 如何取消 $timeout, 以及停止一个$watch()
 - 停止 $timeout我们可以用cancel：
 
-      var customTimeout = $timeout(function () {  
-       // your code
-    }, 1000);
+          var customTimeout = $timeout(function () {  
+       		// your code
+    	}, 1000);
     
        $timeout.cancel(customTimeout);
   
 - 停掉一个$watch：
 
-	// .$watch() 会返回一个停止注册的函数
-	function that we store to a variable  
-		var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {  
-		  if (newVal) {
-			deregisterWatchFn();
-	  		}
-	});
+	    // .$watch() 会返回一个停止注册的函数
+    	function that we store to a variable  
+    		var deregisterWatchFn = $rootScope.$watch(‘someGloballyAvailableProperty’, function (newVal) {  
+    		  if (newVal) {
+    			deregisterWatchFn();
+    	  		}
+    	});
+    
