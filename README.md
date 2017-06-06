@@ -6,7 +6,7 @@
 -----
 ### 知识点
  #### 1. ng-show/ng-hide 与 ng-if的区别
-  我们都知道ng-show/ng-hide实际上是通过display来进行隐藏和显示的。而ng-if实际上控制dom节点的增删除来实现的。因此如果我们是根据不同的条件来进行dom节点的加载的话，那么ng-if的性能好过ng-show.
+  - 我们都知道ng-show/ng-hide实际上是通过display来进行隐藏和显示的。而ng-if实际上控制dom节点的增删除来实现的。因此如果我们是根据不同的条件来进行dom节点的加载的话，那么ng-if的性能好过ng-show.
 -------
  #### 2. $rootScope与$scope的区别
   - 通俗的说$rootScrope 页面所有$scope的父亲。
@@ -18,6 +18,7 @@
    step2:angular回继续解析，找到{{}}表达式，并解析成变量。
 
    step3:接着会解析带有ng-controller的div然后指向到某个controller函数。这个时候在这个controller函数变成一个$scope对象实例。
+   
 ------
  #### 3. 表达式 {{yourModel}}是如何工作的
 
